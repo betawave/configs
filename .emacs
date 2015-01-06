@@ -16,6 +16,7 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
+
 ;;; adding hook to compile c-files
 (add-hook 'c-mode-common-hook 
           (lambda () (define-key c-mode-base-map (kbd "C-c C-l") 'compile)))
@@ -35,4 +36,4 @@
   '(lambda () (setq asm-comment-char ?#)))
 
 ;;; include spim-mode
-(load "~/.emacs.d/spim-mode/spim-mode.el")
+(load "~/.emacs.d/spim-mode/spim-mode.el" t)
